@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "meditation_app"
+version = "0.1.0"
+description = "Simple app to time and track meditiation"
+authors = ["Jasper Wagen <jasperwagen01@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+psycopg2 = "^2.9.3"
+Django = "3.2"
+django-environ = "^0.8.1"
+black = "^22.1.0"
+pre-commit = "^2.17.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
